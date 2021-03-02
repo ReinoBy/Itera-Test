@@ -1,0 +1,19 @@
+{
+    //"al.defaultLaunchConfigurationName": "Microsoft cloud sandbox",
+    "al.enableCodeAnalysis": true,
+    "al.codeAnalyzers": [
+        //"${CodeCop}",
+        //"${AppSourceCop}",
+        //"${UICop}",
+        //"${PerTenantExtensionCop}"
+    ],
+    "CRS.AlSubFolderName": "None",
+    "CRS.FileNamePattern": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+    "CRS.FileNamePatternExtensions": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+    "CRS.FileNamePatternPageCustomizations": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+    "CRS.OnSaveAlFileAction": "Rename",
+    //"CRS.RenameWithGit": false,
+    "CRS.RemovePrefixFromFilename": true,
+    "CRS.ObjectNamePrefix": "SOL "
+
+}
