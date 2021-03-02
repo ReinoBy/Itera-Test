@@ -11,4 +11,5 @@ pageextension 50100 "SOL CustomerCardBookExtension" extends "Customer Card"
         }
     }
 
+
 }
