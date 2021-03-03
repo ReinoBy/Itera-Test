@@ -14,6 +14,12 @@
     "CRS.OnSaveAlFileAction": "Rename",
     //"CRS.RenameWithGit": false,
     "CRS.RemovePrefixFromFilename": true,
-    "CRS.ObjectNamePrefix": "SOL "
+    "CRS.ObjectNamePrefix": "SOL ",
+    "xliffSync.missingTranslation": "%EMPTY%",
+    "xliffSync.parseFromDeveloperNote": true,
+    "xliffSync.findBySourceAndDeveloperNote": true,
+    "xliffSync.findByXliffGeneratorAndDeveloperNote": true,
+    "xliffSync.findByXliffGeneratorNoteAndSource": true,
+    "xliffSync.findByXliffGeneratorNote": true
 
 }

@@ -2,7 +2,7 @@
   "id": "f595e992-bcce-4a2d-a83f-5090452572ad",
   "name": "Bookshelf",
   "publisher": "BCS Itera",
-  "version": "1.0.0.0",
+  "version": "2.0.0.0",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -19,6 +19,9 @@
       "from": 50100,
       "to": 50149
     }
+  ],
+  "features": [
+    "TranslationFile"
   ],
   "contextSensitiveHelpUrl": "https://Bookshelf.com/help/",
   "showMyCode": true,

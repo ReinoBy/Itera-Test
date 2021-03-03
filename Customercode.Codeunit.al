@@ -1,8 +1,10 @@
 codeunit 50100 "SOL Customercode"
 {
     procedure CelebrateCustomer(MyCustomer: Record Customer; ExtraMessage: Text)
+    var
+        NEW_CUSTOMER: Label 'Yee! We have a new customer %1!!\\%2';
     begin
-        Message('Yee! We have a new customer %1!!\\%2', MyCustomer."No.", ExtraMessage);
+        Message(NEW_CUSTOMER, MyCustomer."No.", ExtraMessage);
     end;
 
     [EventSubscriber(ObjectType::Table, Database::Customer, 'OnAfterInsertEvent', '', true, true)]
