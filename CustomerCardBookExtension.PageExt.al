@@ -4,7 +4,7 @@ pageextension 50100 "SOL CustomerCardBookExtension" extends "Customer Card"
     {
         addlast(General)
         {
-            field("SOL Favourite Book No."; Rec."SOL Favourite Book No.")
+            field("SOL Favourite Book Nr"; Rec."SOL Favourite Book Nr")
             {
                 ApplicationArea = All;
             }
