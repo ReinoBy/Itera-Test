@@ -1,6 +1,4 @@
 {
-    //"al.defaultLaunchConfigurationName": "Microsoft cloud sandbox",
-    "al.enableCodeAnalysis": true,
     "al.codeAnalyzers": [
         //"${CodeCop}",
         //"${AppSourceCop}",
@@ -20,6 +18,7 @@
     "xliffSync.findBySourceAndDeveloperNote": true,
     "xliffSync.findByXliffGeneratorAndDeveloperNote": true,
     "xliffSync.findByXliffGeneratorNoteAndSource": true,
-    "xliffSync.findByXliffGeneratorNote": true
+    "xliffSync.findByXliffGeneratorNote": true,
+    "al.enableCodeAnalysis": true
 
 }

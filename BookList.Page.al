@@ -7,6 +7,7 @@ page 50101 "SOL BookList"
     CardPageId = "SOL BookCard";
     Editable = false;
 
+
     layout
     {
         area(Content)

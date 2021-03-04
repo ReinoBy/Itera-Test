@@ -1,6 +1,10 @@
 table 50100 "SOL Book"
 {
-    DataClassification = ToBeClassified;
+    DataClassification = CustomerContent;
+    DrillDownPageId = "SOL BookList";
+    LookupPageId = "SOL BookList";
+    Permissions = tabledata "G/L ENTRY" = RM;
+
 
     fields
     {
@@ -29,8 +33,14 @@ table 50100 "SOL Book"
 
         field(5; "Page count"; Integer)
         {
+            BlankZero = true;
             Caption = 'Page count';
             DataClassification = ToBeClassified;
+        }
+        field(6; "No. of customers"; Integer)
+        {
+            FieldClass = FlowField;
+            CalcFormula = count(Customer where("SOL Favourite Book Nr" = field("No.")));
         }
 
 

@@ -37,6 +37,18 @@ page 50100 "SOL BookCard"
                 {
                     ApplicationArea = All;
                 }
+
+                field("Count of Customers"; Rec."No. of customers")
+                {
+                    ApplicationArea = All;
+                    Editable = false;
+                }
+
+                part("Sales order sublies"; "Sales Order Subform")
+                {
+                    ApplicationArea = All;
+                }
+
             }
         }
     }
