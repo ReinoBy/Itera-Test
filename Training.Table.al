@@ -4,7 +4,7 @@ table 50101 "SOL Training"
 
     fields
     {
-        field(1; "No."; Integer)
+        field(1; "No."; Code[20])
         {
             Caption = 'No.', Comment = 'et-EE=Number';
             DataClassification = ToBeClassified;
@@ -73,6 +73,10 @@ table 50101 "SOL Training"
             Caption = 'Description File Name', Comment = 'et-EE=Kirjelduse fail';
             DataClassification = ToBeClassified;
         }
+        field(12; "No. Series"; Code[20])
+        {
+            DataClassification = ToBeClassified;
+        }
 
 
     }
@@ -84,5 +88,19 @@ table 50101 "SOL Training"
             Clustered = true;
         }
     }
+
+    var
+        "Human Resources Setup": Record "Human Resources Setup";
+        NoSeriesMgt: Codeunit NoSeriesManagement;
+
+    trigger OnInsert()
+
+    begin
+        if "No." = '' then begin
+            "Human Resources Setup".Get();
+            "Human Resources Setup".TestField("SOL Training No.");
+            NoSeriesMgt.InitSeries("Human Resources Setup"."SOL Training No.", xRec."No. Series", 0D, "No.", "No. Series");
+        end;
+    end;
 
 }

@@ -5,7 +5,7 @@ table 50102 "SOL TrainingParticipants"
 
     fields
     {
-        field(1; "Course No."; Integer)
+        field(1; "Course No."; Code[20])
         {
             Caption = 'No.', Comment = 'et-EE=Number';
 
@@ -29,7 +29,7 @@ table 50102 "SOL TrainingParticipants"
 
     keys
     {
-        key(PK; "Employee No.")
+        key(PK; "Course No.", "Employee No.")
         {
             Clustered = true;
         }

@@ -15,6 +15,7 @@ page 50103 "SOL TrainingCard"
                 Caption = 'General';
                 field("No."; Rec."No.")
                 {
+                    Caption = 'No.';
                     ApplicationArea = All;
                 }
                 field(Description; Rec.Description)
@@ -73,6 +74,13 @@ page 50103 "SOL TrainingCard"
         }
         area(FactBoxes)
         {
+
+            part("SOL EmployeeCardPart"; "SOL EmployeeCardPart")
+            {
+                ApplicationArea = All;
+                Provider = "SOL TrainingParticipants";
+                SubPageLink = "No." = field("Employee No.");
+            }
 
         }
 

@@ -93,6 +93,11 @@
           <note from="Developer" annotates="general" priority="2">et-EE=Kirjelduse fail</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SOL Training - Field Description File Name - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2824608708 - Field 1351594800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Series</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SOL Training - Field No. Series - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2839030480 - Field 1667959142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No.</source>
           <note from="Developer" annotates="general" priority="2">et-EE=Number</note>
@@ -128,6 +133,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page SOL TrainingCard - Control General - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3536927848 - Control 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SOL TrainingCard - Control No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3536927848 - Control 749121076 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Detailed</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -137,6 +147,11 @@
           <source>Favourite Book</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension SOL CustomerBookExtension - Field SOL Favourite Book Nr - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 392570507 - Field 566588809 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 520017643">
+          <source>SOL Training No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension HumanResoursesTableExtension - Field SOL Training No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Profile 167109097 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>My Profile</source>
