@@ -10,29 +10,35 @@ page 50102 "SOL TrainingList"
     {
         area(Content)
         {
-            group(GroupName)
+            repeater(Trainings)
             {
+                field(Description; Rec.Description)
+                {
+                    ApplicationArea = All;
+                }
+                field(Fee; Rec.Fee)
+                {
+                    ApplicationArea = All;
+                }
+                field("Start Date"; Rec."Start Date")
+                {
+                    ApplicationArea = All;
+                }
+                field("End Date"; Rec."End Date")
+                {
+                    ApplicationArea = All;
+                }
+                field("No. of Participants"; Rec."No. of Participants")
+                {
+                    ApplicationArea = All;
+                }
+                field(Location; Rec.Location)
+                {
+                    ApplicationArea = All;
+                }
 
             }
         }
     }
 
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
-            }
-        }
-    }
-
-    var
-        myInt: Integer;
 }

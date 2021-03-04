@@ -5,12 +5,14 @@ page 50103 "SOL TrainingCard"
     UsageCategory = Administration;
     SourceTable = "SOL Training";
 
+
     layout
     {
         area(Content)
         {
             group(General)
             {
+                Caption = 'General';
                 field("No."; Rec."No.")
                 {
                     ApplicationArea = All;
@@ -30,7 +32,7 @@ page 50103 "SOL TrainingCard"
             }
             group(Detailed)
             {
-
+                Caption = 'Detailed';
                 field("Description File Name"; Rec."Description File Name")
                 {
                     ApplicationArea = All;
@@ -48,7 +50,7 @@ page 50103 "SOL TrainingCard"
                 {
                     ApplicationArea = All;
                 }
-                field("Duration"; Rec.Duration)
+                field("Duration"; Rec."Training Duration")
                 {
                     ApplicationArea = All;
                 }
@@ -59,8 +61,13 @@ page 50103 "SOL TrainingCard"
             }
             group(Participants)
             {
-
+                part("SOL TrainingParticipants"; "SOL TrainingParticipants")
+                {
+                    ApplicationArea = All;
+                    SubPageLink = "Course No." = field("No.");
+                }
             }
+
 
 
         }

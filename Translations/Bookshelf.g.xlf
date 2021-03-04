@@ -35,27 +35,27 @@
         </trans-unit>
         <trans-unit id="Table 2824608708 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">et-EE=Number</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SOL Training - Field No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2824608708 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">et-EE=Kirjeldus</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SOL Training - Field Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2824608708 - Field 3891454143 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Location</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">et-EE=Asukoht</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SOL Training - Field Location - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2824608708 - Field 474480784 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Date</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">et-EE=Alguskuupäev</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SOL Training - Field Start Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2824608708 - Field 2649176925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>End Date</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">et-EE=Lõppkuupäev</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SOL Training - Field End Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2824608708 - Field 2649176925 - Method 2126772001 - NamedType 3941846598" size-unit="char" translate="yes" xml:space="preserve">
@@ -63,49 +63,49 @@
           <note from="Developer" annotates="general" priority="2">et-EE=Lõpukuupäev peab olema pärast alguskuupäeva!</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SOL Training - Field End Date - Method OnValidate - NamedType ErrorLbl</note>
         </trans-unit>
-        <trans-unit id="Table 2824608708 - Field 1637095154 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Duration</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table SOL Training - Field Duration - Property Caption</note>
+        <trans-unit id="Table 2824608708 - Field 4194636466 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Training Duration</source>
+          <note from="Developer" annotates="general" priority="2">et-EE=Kestvus</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SOL Training - Field Training Duration - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2824608708 - Field 3057692898 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fee</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">et-EE=Hind</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SOL Training - Field Fee - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2824608708 - Field 2336029462 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No. of Participants</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">et-EE=Osalejate arv</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SOL Training - Field No. of Participants - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2824608708 - Field 3322554545 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dimension Set ID</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">et-EE=Dimension Set ID</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SOL Training - Field Dimension Set ID - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2824608708 - Field 1827677506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Detailed description</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">et-EE=Täpsem kirjeldus</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SOL Training - Field Detailed description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2824608708 - Field 702455897 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description File Name</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">et-EE=Kirjelduse fail</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SOL Training - Field Description File Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2839030480 - Field 1667959142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Course No.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2">et-EE=Number</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SOL TrainingParticipants - Field Course No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2839030480 - Field 1964419135 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Employee No.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">et-EE=Töötaja number</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SOL TrainingParticipants - Field Employee No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2839030480 - Field 1480804031 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Employee Name</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">et-EE=Töötaja nimi</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SOL TrainingParticipants - Field Employee Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Codeunit 994351715 - Method 4136265901 - NamedType 4284865841" size-unit="char" translate="yes" xml:space="preserve">
@@ -122,6 +122,16 @@
           <source>Details</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page SOL BookCard - Control Details - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3536927848 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SOL TrainingCard - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3536927848 - Control 749121076 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Detailed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SOL TrainingCard - Control Detailed - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2804049000 - Field 4263909456 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
           <source>Favourite Book</source>
