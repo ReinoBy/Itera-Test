@@ -17,7 +17,31 @@ page 50104 "SOL TrainingParticipants"
                 {
                     ApplicationArea = All;
                 }
+                field("Dimension Set ID"; Rec."Dimension Set ID")
+                {
+                    ApplicationArea = All;
+                    Editable = false;
+                }
             }
+        }
+    }
+    actions
+    {
+        area(Processing)
+        {
+            action(Dimensions)
+            {
+                ApplicationArea = all;
+                PromotedOnly = true;
+                Promoted = true;
+                PromotedCategory = Category4;
+                // RunObject = ;
+                trigger OnAction()
+                begin
+                    rec.RowDim();
+                end;
+            }
+
         }
     }
 
