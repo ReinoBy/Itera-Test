@@ -4,6 +4,7 @@ page 50103 "SOL TrainingCard"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "SOL Training";
+    PromotedActionCategories = 'Manage,Koolitus,bla,Dimensions,Employee dimensions,,,,';
 
 
     layout
@@ -12,6 +13,7 @@ page 50103 "SOL TrainingCard"
         {
             group(General)
             {
+
                 Caption = 'General';
                 field("No."; Rec."No.")
                 {
@@ -59,6 +61,11 @@ page 50103 "SOL TrainingCard"
                 {
                     ApplicationArea = All;
                 }
+                field("Dimension Set ID"; Rec."Dimension Set ID")
+                {
+                    ApplicationArea = All;
+                    Editable = false;
+                }
             }
             group(Participants)
             {
@@ -66,6 +73,7 @@ page 50103 "SOL TrainingCard"
                 {
                     ApplicationArea = All;
                     SubPageLink = "Course No." = field("No.");
+
                 }
             }
 
@@ -84,6 +92,25 @@ page 50103 "SOL TrainingCard"
 
         }
 
+    }
+    actions
+    {
+        area(Creation)
+        {
+            action(Dimensions)
+            {
+                ApplicationArea = all;
+                PromotedOnly = true;
+                Promoted = true;
+                PromotedCategory = Category4;
+                // RunObject = ;
+                trigger OnAction()
+                begin
+                    rec.RowDim();
+                end;
+            }
+
+        }
     }
 }
 

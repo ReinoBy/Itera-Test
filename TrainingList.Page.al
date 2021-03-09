@@ -40,5 +40,16 @@ page 50102 "SOL TrainingList"
             }
         }
     }
+    actions
+    {
+        area(Creation)
+        {
+            action(Training)
+            {
+                Caption = 'Training';
+
+            }
+        }
+    }
 
 }

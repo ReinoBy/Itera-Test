@@ -14,6 +14,11 @@ table 50101 "SOL Training"
         {
             Caption = 'Description', Comment = 'et-EE=Kirjeldus';
             DataClassification = ToBeClassified;
+            trigger OnValidate()
+            begin
+                Rec.CreateDimension();
+            end;
+
         }
 
         field(3; Location; Text[50])
@@ -92,6 +97,13 @@ table 50101 "SOL Training"
     var
         "Human Resources Setup": Record "Human Resources Setup";
         NoSeriesMgt: Codeunit NoSeriesManagement;
+        DimensionManagement: Codeunit DimensionManagement;
+        DimensionValue: Record "Dimension Value";
+        DimSetEntry: Record "Dimension Set Entry" temporary;
+        OldDimSetID: Integer;
+        ParticipantLine: Record "SOL TrainingParticipants";
+
+
 
     trigger OnInsert()
 
@@ -100,6 +112,45 @@ table 50101 "SOL Training"
             "Human Resources Setup".Get();
             "Human Resources Setup".TestField("SOL Training No.");
             NoSeriesMgt.InitSeries("Human Resources Setup"."SOL Training No.", xRec."No. Series", 0D, "No.", "No. Series");
+        end;
+    end;
+
+    procedure CreateDimension()
+
+    begin
+        OldDimSetID := "Dimension Set ID";
+        "Human Resources Setup".Get();
+        DimensionValue.Init();
+        if DimensionValue.Get("Human Resources Setup"."SOL Training Dimension Code", rec."No.") then begin
+            DimensionValue.Validate(Name, Description);
+            DimensionValue.Modify(true);
+        end else begin
+            DimensionValue.Validate("Dimension Code", "Human Resources Setup"."SOL Training Dimension Code");
+            DimensionValue.Validate(Code, "No.");
+            DimensionValue.Validate(Name, Description);
+            DimensionValue.Insert(true);
+        end;
+        DimensionManagement.GetDimensionSet(DimSetEntry, "Dimension Set ID");
+        DimSetEntry.Init();
+        DimSetEntry.Validate("Dimension Code", DimensionValue."Dimension Code");
+        DimSetEntry.Validate("Dimension Value Code", DimensionValue.Code);
+        if not DimSetEntry.Insert(true) then
+            DimSetEntry.Modify(true);
+        "Dimension Set ID" := DimensionManagement.GetDimensionSetID(DimSetEntry);
+        Rec.Modify(true);
+
+    end;
+
+    procedure RowDim()
+
+    begin
+
+        OldDimSetID := "Dimension Set ID";
+        "Dimension Set ID" :=
+          DimensionManagement.EditDimensionSet(
+            "Dimension Set ID", StrSubstNo('%1 %2', "Human Resources Setup"."SOL Training Dimension Code", "No."));
+        if OldDimSetID <> "Dimension Set ID" then begin
+            Modify;
         end;
     end;
 
