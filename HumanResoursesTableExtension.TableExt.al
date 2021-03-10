@@ -18,7 +18,6 @@ tableextension 50101 "HumanResoursesTableExtension" extends "Human Resources Set
         {
             DataClassification = ToBeClassified;
             TableRelation = Dimension;
-
         }
     }
     var

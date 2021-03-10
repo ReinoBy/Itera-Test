@@ -163,6 +163,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension SOL CustomerBookExtension - Field SOL Favourite Book Nr - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3169346615 - Field 1301091316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1498446062">
+          <source>SOL Training costs</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SOL EmployeeTableExtension - Field SOL Training costs - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3169346615 - Field 3893279953 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1498446062">
+          <source>SOL Training Days</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SOL EmployeeTableExtension - Field SOL Training Days - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 392570507 - Field 566588809 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 520017643">
           <source>SOL Training No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
