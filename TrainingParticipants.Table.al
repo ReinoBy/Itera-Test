@@ -18,7 +18,7 @@ table 50102 "SOL TrainingParticipants"
             DataClassification = ToBeClassified;
             trigger OnValidate()
             begin
-                // Rec.CreateDimension();
+                Rec.CreateDimension();
             end;
 
 
@@ -33,11 +33,10 @@ table 50102 "SOL TrainingParticipants"
         }
         field(4; "Dimension Set ID"; Integer)
         {
-            Caption = 'Dimension Set ID', Comment = 'et-EE=Dimension Set ID';
+            Caption = 'Dimension Set ID', Comment = 'et-EE=Dimensiooni Set ID';
             DataClassification = ToBeClassified;
-            Editable = false;
-
         }
+
     }
 
     keys
@@ -48,46 +47,54 @@ table 50102 "SOL TrainingParticipants"
         }
     }
 
-    // var
-    //     "Human Resources Setup": Record "Human Resources Setup";
-    //     NoSeriesMgt: Codeunit NoSeriesManagement;
-    //     DimensionManagement: Codeunit DimensionManagement;
-    //     DimensionValue: Record "Dimension Value";
-    //     DimSetEntry: Record "Dimension Set Entry" temporary;
-    //     OldDimSetID: Integer;
-    //     ParticipantLine: Record "SOL TrainingParticipants";
+    var
+        "Human Resources Setup": Record "Human Resources Setup";
+        DimensionManagement: Codeunit DimensionManagement;
+        DimensionValue: Record "Dimension Value";
+        DimSetEntry: Record "Dimension Set Entry" temporary;
+        OldDimSetID: Integer;
 
-    // procedure CreateDimension()
+        Training: Record "SOL Training";
+        Employee: Record Employee;
 
-    // begin
-    //     OldDimSetID := "Dimension Set ID";
-    //     "Human Resources Setup".Get();
-    //     DimensionValue.Init();
-    //     if DimensionValue.Get("Human Resources Setup"."SOL Employee Dimension Code", "Employee No.") then begin
-    //         DimensionManagement.GetDimensionSet(DimSetEntry, "Dimension Set ID");
-    //         DimSetEntry.Init();
-    //         DimSetEntry.Validate("Dimension Code", DimensionValue."Dimension Code");
-    //         DimSetEntry.Validate("Dimension Value Code", DimensionValue.Code);
-    //         if not DimSetEntry.Insert(true) then
-    //             DimSetEntry.Modify(true);
-    //         "Dimension Set ID" := DimensionManagement.GetDimensionSetID(DimSetEntry);
-    //         Rec.Modify(true);
-    //     end;
+    procedure CreateDimension()
 
-    // end;
+    begin
+        OldDimSetID := "Dimension Set ID";
+        "Human Resources Setup".Get();
+        DimensionValue.Init();
+        if DimensionValue.Get("Human Resources Setup"."SOL Employee Dimension Code", "Employee No.") then begin
+            DimensionValue.Validate(Name, StrSubstNo('%1 %2', Employee."First Name", Employee."Last Name"));
+            DimensionValue.Modify(true);
+        end else begin
+            DimensionValue.Validate("Dimension Code", "Human Resources Setup"."SOL Employee Dimension Code");
+            DimensionValue.Validate(Code, "Employee No.");
+            DimensionValue.Validate(Name, StrSubstNo('%1 %2', Employee."First Name", Employee."Last Name"));
+            DimensionValue.Insert(true);
+        end;
+        DimensionManagement.GetDimensionSet(DimSetEntry, "Dimension Set ID");
+        DimSetEntry.Init();
+        DimSetEntry.Validate("Dimension Code", DimensionValue."Dimension Code");
+        DimSetEntry.Validate("Dimension Value Code", DimensionValue.Code);
+        if not DimSetEntry.Insert(true) then
+            DimSetEntry.Modify(true);
+        "Dimension Set ID" := DimensionManagement.GetDimensionSetID(DimSetEntry);
+        "Employee Name" := StrSubstNo('%1 %2', Employee."First Name", Employee."Last Name");
+    end;
 
-    // procedure RowDim()
+    procedure RowDim()
 
-    // begin
+    begin
 
-    //     OldDimSetID := "Dimension Set ID";
-    //     "Dimension Set ID" :=
-    //       DimensionManagement.EditDimensionSet(
-    //         "Dimension Set ID", StrSubstNo('%1 %2', "Human Resources Setup"."SOL Employee Dimension Code", "Employee No."));
-    //     if OldDimSetID <> "Dimension Set ID" then begin
-    //         Modify;
-    //     end;
-    // end;
+        OldDimSetID := "Dimension Set ID";
+        "Dimension Set ID" :=
+          DimensionManagement.EditDimensionSet(
+            "Dimension Set ID", StrSubstNo('%1 %2', "Human Resources Setup"."SOL Employee Dimension Code", "Employee No.")
+            );
+        if OldDimSetID <> "Dimension Set ID" then begin
+            Modify;
+        end;
+    end;
 
     // procedure TrainingParticipantsExist(): Boolean
     // begin

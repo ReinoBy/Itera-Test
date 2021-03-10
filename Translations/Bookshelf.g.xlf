@@ -115,7 +115,7 @@
         </trans-unit>
         <trans-unit id="Table 2839030480 - Field 3322554545 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dimension Set ID</source>
-          <note from="Developer" annotates="general" priority="2">et-EE=Dimension Set ID</note>
+          <note from="Developer" annotates="general" priority="2">et-EE=Dimensiooni Set ID</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SOL TrainingParticipants - Field Dimension Set ID - Property Caption</note>
         </trans-unit>
         <trans-unit id="Codeunit 994351715 - Method 4136265901 - NamedType 4284865841" size-unit="char" translate="yes" xml:space="preserve">

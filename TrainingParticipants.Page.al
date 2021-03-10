@@ -3,6 +3,7 @@ page 50104 "SOL TrainingParticipants"
     PageType = ListPart;
     SourceTable = "SOL TrainingParticipants";
 
+
     layout
     {
         area(Content)
@@ -38,7 +39,7 @@ page 50104 "SOL TrainingParticipants"
                 // RunObject = ;
                 trigger OnAction()
                 begin
-                    // rec.RowDim();
+                    rec.RowDim();
                 end;
             }
 
